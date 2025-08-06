@@ -44,3 +44,4 @@ unpacked/
 # Documentation and AI-related files
 docs/
 CLAUDE.md
+.claude
