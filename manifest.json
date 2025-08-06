@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Slack Token Getter",
+  "version": "1.0.0",
+  "description": "Extract Slack XOXC and XOXD tokens for development",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "cookies",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://app.slack.com/*",
+    "https://*.slack.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Get Slack Tokens"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://app.slack.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png", 
+    "128": "icons/icon128.png"
+  }
+}

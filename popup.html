@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="header">
+    <h2>🔑 Slack Token Getter</h2>
+  </div>
+  
+  <div class="main-content">
+    <button id="extractBtn" class="extract-btn">
+      Extract Tokens
+    </button>
+    
+    <div id="status" class="status"></div>
+    
+    <div id="tokensContainer" class="tokens-container" style="display: none;">
+      <div class="token-section">
+        <div class="token-label">SLACK_XOXC_TOKEN:</div>
+        <div id="xoxcValue" class="token-value"></div>
+        <button id="copyXoxc" class="copy-btn">Copy</button>
+      </div>
+      
+      <div class="token-section">
+        <div class="token-label">SLACK_XOXD_TOKEN:</div>
+        <div id="xoxdValue" class="token-value"></div>
+        <button id="copyXoxd" class="copy-btn">Copy</button>
+      </div>
+      
+      <div class="token-section">
+        <div class="token-label">Team Domain:</div>
+        <div id="teamDomain" class="token-value"></div>
+        <button id="copyDomain" class="copy-btn">Copy</button>
+      </div>
+      
+      <div class="token-section">
+        <div class="token-label">Environment Config:</div>
+        <pre id="envConfig" class="env-config"></pre>
+        <button id="copyAll" class="copy-btn">Copy All</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
