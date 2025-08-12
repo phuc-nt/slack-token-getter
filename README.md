@@ -2,6 +2,8 @@
 
 🔑 A secure Chrome extension to quickly extract Slack tokens for development purposes.
 
+> 💡 **Perfect for [Slack Browser MCP Server](https://github.com/phuc-nt/slack-browser-mcp-server)** - Get your tokens instantly for AI assistant integration!
+
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/phuc-nt/slack-token-getter/releases)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Chrome Web Store](https://img.shields.io/badge/chrome-extension-brightgreen.svg)](https://github.com/phuc-nt/slack-token-getter/releases)
@@ -9,11 +11,11 @@
 ## ✨ Features
 
 - **One-click token extraction** - Extract both XOXC and XOXD tokens instantly
-- **Chrome Cookies API integration** - Access HttpOnly cookies securely  
-- **JSON format output** - Ready-to-use environment configuration
-- **Copy button animations** - Smooth UX with visual feedback
+- **Ready for MCP integration** - Perfect for [Slack Browser MCP Server](https://github.com/phuc-nt/slack-browser-mcp-server)
+- **JSON format output** - Copy tokens directly to your `.env` file
 - **Security-first approach** - No data storage, local processing only
-- **Manifest V3 compliant** - Future-proof extension architecture
+
+![Features](img/image.png)
 
 ## 🚀 Installation
 
@@ -44,7 +46,10 @@ Then follow step 2 above.
 3. Click "Extract Tokens" button
 4. Copy individual tokens or the complete configuration
 
-### Output Format
+### Using with Slack Browser MCP Server
+
+Perfect for AI assistant integration! Use the extracted tokens with [Slack Browser MCP Server](https://github.com/phuc-nt/slack-browser-mcp-server):
+
 ```json
 {
   "env": {
@@ -55,17 +60,14 @@ Then follow step 2 above.
 }
 ```
 
+Then enable MCP-compatible AI assistants to interact with your Slack workspace directly!
+
 ## 🔧 Technical Details
 
 - **Browser Support**: Chrome 88+, Edge 88+ (Chromium-based)
 - **Permissions**: `activeTab`, `cookies`, `scripting`
 - **Domains**: `*.slack.com` only
 - **Architecture**: Manifest V3, CSP compliant
-
-### Token Extraction Methods
-- **XOXC Token**: From `localStorage.localConfig_v2.teams[].token`
-- **XOXD Token**: From Chrome Cookies API (`d` cookie with HttpOnly flag)
-- **Team Domain**: From URL pathname `/client/{TEAM_ID}`
 
 ## 🛡️ Security & Privacy
 
@@ -75,20 +77,9 @@ Then follow step 2 above.
 - **Domain restricted** - Only operates on Slack domains
 - **Open source** - Full code transparency
 
-Read our [Privacy Policy](PRIVACY.md) for details.
+## 🔗 Related Projects
 
-## 📦 Releases
-
-- **Latest**: [v1.0.0](https://github.com/phuc-nt/slack-token-getter/releases/latest) - Initial stable release
-- **Changelog**: [CHANGELOG.md](CHANGELOG.md)
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+- **[Slack Browser MCP Server](https://github.com/phuc-nt/slack-browser-mcp-server)** - Use these tokens to enable AI assistant integration with Slack
 
 ## 📄 License
 
